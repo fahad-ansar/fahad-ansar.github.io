@@ -115,7 +115,7 @@ var oval = new Konva.Ellipse({
   });
 
 var textp = new Konva.Text({
-    x: 920,
+    x: stage.width() / 2,
     y: 75,
     text: text,
     fontSize: 20,
@@ -169,13 +169,15 @@ function addCnct(){
     
     stage.add(layer);
     
-    line.on('mouseover', function() {
+    layer.on('mouseover', function() {
         document.body.style.cursor = 'pointer';
     });
 
-    
+    layer.on('dblclick  dbltap', function(){
+      layer.destroy();
+    });
 
-    line.on('mouseout', function() {
+    layer.on('mouseout', function() {
         document.body.style.cursor = 'default   ';
     });
     }
