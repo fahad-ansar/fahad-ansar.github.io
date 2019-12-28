@@ -46,7 +46,7 @@ function addrecta(){
       document.body.style.cursor = 'pointer';
     });
 
-    layer.on('dblclick', function(){
+    layer.on('dblclick dbltap', function(){
       layer.destroy();
     });
 
@@ -86,7 +86,7 @@ layer.on('mouseout', function() {
     document.body.style.cursor = 'default   ';
 });
 
-layer.on('dblclick', function(){
+layer.on('dblclick  dbltap', function(){
   layer.destroy();
 });
 }
@@ -139,7 +139,7 @@ layer.on('mouseover', function() {
 layer.on('mouseout', function() {
     document.body.style.cursor = 'default   ';
 });
-layer.on('dblclick', function(){
+layer.on('dblclick  dbltap', function(){
   layer.destroy();
 });
 }
