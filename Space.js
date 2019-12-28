@@ -115,7 +115,7 @@ var oval = new Konva.Ellipse({
   });
 
 var textp = new Konva.Text({
-    x: stage.width() / 2,
+    x: stage.width() / 2-40,
     y: 75,
     text: text,
     fontSize: 20,
