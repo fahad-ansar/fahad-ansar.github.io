@@ -30,7 +30,16 @@ nav{
 }
 
 
-
+#grid a{
+text-decoration:none;
+background-color: #26528c;
+color: white;
+border-radius: 10px;
+padding:10px;
+font-size:20px;
+height:auto;
+width:auto;
+}
 
 
 .blue:hover{
@@ -102,7 +111,7 @@ color:black;
 #a1, #a2, #a3, #a4{
     background-color: #969696;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
 
     margin-top: 20px;
     margin-bottom: 20px;
