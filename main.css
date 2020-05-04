@@ -44,17 +44,17 @@ width:auto;
 
 .blue:hover{
     background: linear-gradient(to right, rgba(0, 255, 255, 0.527), rgba(0, 88, 202, 0.199));
-    transition: background 1s ease;
+    transition: 0.5s ease;
 }
 
 .orange:hover{
     background: linear-gradient(to right, rgba(255, 138, 42, 0.829), rgba(56, 1, 35, 0.849));
-    transition: background 1s ease;
+    transition: 0.5s ease;
 }
 
 .cyan:hover{
     background: linear-gradient(to right, rgba(8, 255, 50, 0.829), rgba(0, 49, 51, 0.849));
-    transition: background 1s ease;
+    transition: 0.5s ease;
 }
 
 
@@ -132,17 +132,18 @@ color:black;
 #toh{
     display: none;
     color: white;
-    transition: 0.9s;
+    transition: 0.5s;
 }
 
-#a1:hover #toh{
+#a1:hover #toh, #a2:hover #toh, #a3:hover #toh, #a4:hover #toh{
     display: block;
-    transition: 1s;
+    transition: 0.5s;
 }
 
-#a1:hover{
+#a1:hover, #a2:hover, #a3:hover, #a4:hover{
 	height:600px;
-	transition: 0.5s;
+	transition: 0.3s;
+	position: relative;
 }
 
 #a1 ul, #a2 ul, #a3 ul, #a4 ul{
@@ -161,5 +162,4 @@ margin:0;
 list-style-type:none;
 border: none;
 }
-
 
