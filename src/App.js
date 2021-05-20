@@ -14,15 +14,7 @@ class App extends React.Component {
     return (
       <>
       <h1 style={{alignContent:"flex-start" , textAlign:"left" }}>sdfdsf</h1>
-      <div>
-         <Router>
-            <RighBar />
-            <Switch>
-              <Route path='/' />
-            </Switch>
-         </Router>
-         
-      </div>
+   
       <div className="Ros">
       <Rosh />
       </div>
