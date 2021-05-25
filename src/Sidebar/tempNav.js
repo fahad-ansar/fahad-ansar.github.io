@@ -1,25 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './App.css';
-import Rosh from './Games/Rosh';
-// import RighBar from './Sidebar/rightbar';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-
-import { Route, Switch ,  BrowserRouter as Router} from 'react-router-dom';
-
-import about from './Pages/about';
-// import navBar from './Sidebar/tempNav';
-
+import React from 'react';
+// Be sure to include styles at some point, probably during your bootstraping
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+import { render } from 'react-dom';
 
 
-class App extends React.Component {
 
-  render(){
-    return (
-      <>
-      {/* <navBar/> */}
-      <Router>
+export default class navBar  {
+    render(){
+        return(
+            <Router>
             <Route render={({ location, history }) => (
                 <React.Fragment>
                     <SideNav
@@ -51,21 +41,15 @@ class App extends React.Component {
                         </SideNav.Nav>
                     </SideNav>
                     <main>
-                        <Route path="/home" component={props => <about />} />
+                        <Route path="/" exact component={props => <RootComponent />} />
+                        <Route path="/home" component={props => <Home />} />
+                        <Route path="/devices" component={props => <Devices />} />
                     </main>
                 </React.Fragment>
             )}
             />
          </Router>
-      <h1 style={{alignContent:"flex-start" , textAlign:"left" }}>sdfdsf</h1>
-
-      <div className="Ros">
-      <Rosh />
-      </div>
-      </>
-     );
-  }
+        )
+    }
 }
 
-
-export default App;
