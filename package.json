@@ -1,24 +1,30 @@
 {
-    "homepage": "http://www.fahadansar.website",
-    "name": "faw",
+    "name": "fahad-ansar.github.io",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "react-icons": "^4.2.0",
-        "react-pro-sidebar": "^0.6.0",
-        "react-router-dom": "^5.2.0",
+        "@testing-library/jest-dom": "^5.12.0",
+        "@testing-library/react": "^11.2.7",
+        "@testing-library/user-event": "^12.8.3",
+        "gh-pages": "^3.2.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
         "react-scripts": "4.0.3",
-        "web-vitals": "^1.1.1"
+        "web-vitals": "^1.1.2"
     },
+    "homepage": "https://fahad-ansar.github.io/faw",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
     },
     "browserslist": {
         "production": [
