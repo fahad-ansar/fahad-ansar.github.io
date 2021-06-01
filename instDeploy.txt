@@ -1,0 +1,3 @@
+add homepage variable to package .json
+install gh-pages if its been deployed to github
+add lines below eject line in scripts : "deploy": "gh-pages -d build"
