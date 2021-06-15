@@ -1,70 +1,52 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React ,{useState} from 'react';
 import './App.css';
+import './index.css';
+
 import Rosh from './Games/Rosh';
-// import RighBar from './Sidebar/rightbar';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Prj from './Pages/Prj';
 
-import { Route, Switch ,  BrowserRouter as Router} from 'react-router-dom';
+import Navbar from './Components/Navbar';
 
-import about from './Pages/about';
-// import navBar from './Sidebar/tempNav';
+import {CgMenuRound} from 'react-icons/cg';
+
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
+function App() {
+
+
+    const [showNav, setShowNav] = useState(false);
 
 
 
-class App extends React.Component {
+    return ( 
+    <>
+       <div>
+         <Router>
 
-  render(){
-    return (
-      <>
-      {/* <navBar/> */}
-      <Router>
-            <Route render={({ location, history }) => (
-                <React.Fragment>
-                    <SideNav
-                        onSelect={(selected) => {
-                            const to = '/' + selected;
-                            if (location.pathname !== to) {
-                                history.push(to);
-                            }
-                        }}
-                    >
-                        <SideNav.Toggle />
-                        <SideNav.Nav defaultSelected="home">
-                            <NavItem eventKey="home">
-                                <NavIcon>
-                                    <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
-                                </NavIcon>
-                                <NavText>
-                                    Home
-                                </NavText>
-                            </NavItem>
-                            <NavItem eventKey="devices">
-                                <NavIcon>
-                                    <i className="fa fa-fw fa-device" style={{ fontSize: '1.75em' }} />
-                                </NavIcon>
-                                <NavText>
-                                    Devices
-                                </NavText>
-                            </NavItem>
-                        </SideNav.Nav>
-                    </SideNav>
-                    <main>
-                        <Route path="/home" component={props => <about />} />
-                    </main>
-                </React.Fragment>
-            )}
-            />
-         </Router>
-      <h1 style={{alignContent:"flex-start" , textAlign:"left" }}>sdfdsf</h1>
+        <div className="one">
+            <header><CgMenuRound onClick={()=>setShowNav(!showNav)} size='35' color='#eaecef' className='menu_btn' /></header>
+            <Navbar show={showNav}/>
+        </div>
 
-      <div className="Ros">
-      <Rosh />
-      </div>
-      </>
-     );
-  }
+        
+
+        <div className='main'>
+            <Route path='/' exact={true} component={Home}/>
+            <Route path='/prj' exact={true} component={Prj}/>
+            <Route path='/about' exact={true} component={About}/>
+
+        </div>
+
+        </Router>
+
+       </div>
+
+        
+    </> 
+    );
+    
 }
 
 
