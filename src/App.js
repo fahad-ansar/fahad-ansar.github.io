@@ -7,6 +7,8 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Prj from './Pages/Prj';
 
+import Footer from './Components/Footer';
+
 import Navbar from './Components/Navbar';
 
 import {CgMenuRound} from 'react-icons/cg';
@@ -25,8 +27,8 @@ function App() {
        <div>
          <Router>
 
-        <div className="one">
-            <header><CgMenuRound onClick={()=>setShowNav(!showNav)} size='35' color='#eaecef' className='menu_btn' /></header>
+        <div className="nav">
+            <header ><CgMenuRound onClick={()=>setShowNav(!showNav)} size='40' color='#800000' className='menu_btn' /></header>
             <Navbar show={showNav}/>
         </div>
 
@@ -38,6 +40,8 @@ function App() {
             <Route path='/about' exact={true} component={About}/>
 
         </div>
+
+        <Footer/>
 
         </Router>
 

@@ -1,9 +1,10 @@
-import Rosh from "../Games/Rosh";
+
 
 const Prj = () =>{
     return <div>
-        < Rosh />
-
+        <ul>
+            <li>timeline</li>
+        </ul>
     </div>
 }
 

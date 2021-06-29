@@ -46,7 +46,7 @@
     width: auto;
   }
   button {
-    width: 200px;
+    width: fit-content;
     height: 50px;
     display: block;
     margin: 10px auto;
@@ -59,4 +59,13 @@
   
   button:hover {
     cursor: pointer;
+  }
+
+  #title{
+    background-color: orange;
+    color: red ;
+    width: fit-content;
+    font-size:x-large;
+    padding: 0;
+    margin-left: 32%;
   }

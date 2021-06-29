@@ -94,14 +94,14 @@ class Rosh extends React.Component {
     return (
       <>
    
-       <h1 style={{textAlign:"center", backgroundColor:"lightgray"}}>ROSHAMBO</h1>
+       <h1 id="title">ROSHAMBO</h1>
    
        <div >
         <Player  weaps={userplayer} />
         <Player weaps={compplayer}/>
        </div>
    
-       <div style={{backgroundColor:"black", borderRadius:"25px"}}>
+       <div >
          <button className="weaponBtn" onClick={()=> this.choostWeapon("rock")}>
             rock
          </button>

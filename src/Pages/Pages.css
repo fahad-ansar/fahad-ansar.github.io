@@ -1,0 +1,21 @@
+*{
+    list-style-type:none ;
+}
+
+#sm{
+    background: linear-gradient(90deg, rgba(0,76,255,1) 0%, rgb(0, 230, 226) 100%);
+    margin: 30px;
+   border-radius: 10px;
+}
+
+#Realabout{
+    background: linear-gradient(90deg, rgba(255,124,0,1) 0%, rgba(142,9,105,1) 100%);
+    margin: 30px;
+    border-radius: 10px;
+}
+
+#Skills{
+    background: linear-gradient(90deg, rgba(0,255,33,1) 0%, rgba(9,136,142,1) 100%);
+    margin: 30px;
+    border-radius: 10px;
+}
