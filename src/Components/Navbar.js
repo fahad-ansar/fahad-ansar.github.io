@@ -19,8 +19,7 @@ const Navbar = ({show}) => {
                 <Link to='/about'>ABOUT</Link>
                 </li>
             </ul>
-            
-            <img src={logo} alt='logo' className='logo'/>
+        
 
             
         </div>

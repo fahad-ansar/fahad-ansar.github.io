@@ -5,7 +5,7 @@ import logo from './logo.png';
 
 const Footer = () => {
     return(
-        <div className={show ? 'sidenav active' : 'sidenav'}> 
+        <div> 
             
             <img src={logo} alt='logo' className='logo'/>
         </div>
