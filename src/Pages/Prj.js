@@ -1,10 +1,8 @@
-
+import Timeline from "./Timeline/Timeline.";
 
 const Prj = () =>{
     return <div>
-        <ul>
-            <li>timeline</li>
-        </ul>
+           <h1>Under Development..</h1>
     </div>
 }
 

@@ -1,10 +1,9 @@
 import Particles from 'react-particles-js';
 
 const Home = () =>{
-    return <div style={{background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,110,255,1) 100%)", zIndex:"1", }}>
+    return <div style={{background: "linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 100%)", zIndex:"1", borderRadius:"25px" }}>
         
-        <Particles
-    params={{
+        <Particles params={{
 	    "particles": {
 			"number": {
 			  "value": 10,
@@ -14,7 +13,7 @@ const Home = () =>{
 			  }
 			},
 			"color": {
-			  "value": "#ffffff"
+			  "value": "#800000"
 			},
 			"shape": {
 			  "type": "triangle", 
@@ -23,7 +22,7 @@ const Home = () =>{
 				"color": "#000000"
 			  },
 			  "polygon": {
-				"nb_sides": 3
+				"nb_sides": 4
 			  },
 			},
 			"opacity": {
@@ -78,18 +77,21 @@ const Home = () =>{
 			  "grab": {
 				"distance": 200,
 				"line_linked": {
+					"color":"#000000",
 				  "opacity": 1
 				}
 			  },
 			  "repulse": {
-				"distance": 200,
+				"distance": 300,
 				"duration": 0.4
 			  },
 			
 			}
 		  },
-	}} />
+		}} style={{position:"relative",zIndex:"0"}} />
 
+
+		{/* <h1 style={{position:"absolute",top:"0",left:"0",zIndex:"1",float:"left"}}>fflsfjglksdfjgsldkfgjklj</h1> */}
 
     </div>
 

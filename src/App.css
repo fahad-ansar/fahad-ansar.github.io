@@ -1,7 +1,8 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  
+  text-decoration: none; 
+
 }
 
 body{
@@ -17,10 +18,11 @@ body{
 
 /* menu button */
 header{
-  padding: 1px;
+  padding: 1px 0px;
   height: min-content;
-  width: min-content;
+  width: fit-content;
   border-radius: 5px;
+ 
   margin: 2px;
   z-index: 1;
   /* position: absolute; */
@@ -29,54 +31,116 @@ header{
 
 
 
-/* side nav bar logo */
-.logo{
-  width: 5%;
-  background-color: inherit;
-}
+
 
 
 
 /* side nav bar */
-.sidenav{
+.sidenav {
   background-color: maroon;
   z-index: 2;
   height:100%;
   left: -100%;
-  width:min-content;
+  width:180px;
   position: absolute;
   transition: all 0.3s cubic-bezier(.17,.67,.43,1.19);
   border-radius: 10px;
   z-index: 2;
 }
 
+
 .sidenav.active{
   left: 0%;
-}
-
-.sidenav ul li {
-  list-style-type: none;
-}
-
-.sidenav ul{
-  padding: 5%;
-  margin-top: 40%;
 }
 
 .sidenav ul li a{
   text-decoration: none;
   font-size:larger;
   color:#efefef;
-  font-weight:lighter;
-  padding: 20px;
-  transition: all 1s;
-  border-radius: 5px;
-  display: block;
 }
 
-ul li a:hover,
-ul li a:active{
-  background: navy;
-  color: inherit ;
-  transition: all 1s;
+
+.sidenav ul{
+  padding: 5%;
+  margin-top: 60%;
+}
+
+.sidenav ul li{
+  list-style-type:none;
+  font-weight:lighter;
+  padding: 20px;
+  margin-top: 20%;
+  display: block;
+
+}
+
+
+
+
+#home:hover{
+  background: linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 100%);
+  animation: btn-effects-home 0.15s ease-in-out ;
+  
+  
+}
+
+#prj:hover{
+  background: linear-gradient(270deg, rgba(138,70,252,1) 0%, rgba(255,0,0,1) 100%); 
+  animation: btn-effects-prj 0.15s ease-in-out ;
+}
+
+#abt:hover{
+  background: linear-gradient(90deg, #7e34ff 0%, rgb(0, 110, 255) 100%);
+  animation: btn-effects-abt 0.15s ease-in-out ; 
+}
+
+
+#home:hover *, #prj:hover *, #abt:hover *{
+  color: rgb(0, 0, 0);
+  transition: all 0.5s ease-in-out;
+  border-radius: 15px;
+  
+}
+
+#home:hover , #prj:hover, #abt:hover{
+  transition: all 0.5s ease-in-out;
+  border-radius: 15px;
+}
+
+/* linear */
+@keyframes btn-effects-home {
+  0%{background: transparent;}
+  25%{background: linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 25%); }
+  50%{background: linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 50%);}
+  75%{background: linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 75%);}
+  100%{background: linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 100%); }
+}
+
+/**/
+@keyframes btn-effects-prj {
+  0%{background: transparent;}
+  25%{background: linear-gradient(270deg, rgba(138,70,252,1) 0%, rgba(255,0,0,1) 25%); }
+  50%{background: linear-gradient(270deg, rgba(138,70,252,1) 0%, rgba(255,0,0,1) 50%);}
+  75%{background: linear-gradient(270deg, rgba(138,70,252,1) 0%, rgba(255,0,0,1) 75%);}
+  100%{background: linear-gradient(270deg, rgba(138,70,252,1) 0%, rgba(255,0,0,1) 100%); }
+}
+
+/*circular*/
+@keyframes btn-effects-abt {
+  0%{background: transparent;}
+  25%{background: radial-gradient(circle, rgba(114,31,252,1) 0%, rgba(2,223,207,1) 25%); }
+  50%{background: radial-gradient(circle, rgba(114,31,252,1) 0%, rgba(2,223,207,1) 50%);}
+  75%{background: radial-gradient(circle, rgba(114,31,252,1) 0%, rgba(2,223,207,1) 75%);}
+  100%{background: radial-gradient(circle, rgba(114,31,252,1) 0%, rgba(2,223,207,1) 100%); }
+}
+
+
+
+.navIcon{
+  padding: 0px 10px;
+  color:#efefef;
+}
+
+.navIcon:hover {
+  color: rgb(0, 0, 0) ;
 }

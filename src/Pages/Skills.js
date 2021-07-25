@@ -1,6 +1,8 @@
 import React from "react";
 import "./Pages.css";
 
+import Card from './Card';
+
 import Java from './assets/java.png';
 import Cp from './assets/C.png';
 import Js from './assets/js.png';
@@ -18,7 +20,8 @@ import oop from './assets/oop.png';
 
 const Skills = () =>{
     return <div id="Skills" >
-        
+
+            {/* <Card title='Java' imageUrl={Java}/> */}
             <img src={Java} height={100}/>
             <img src={Cp} height={100}/>
             <img src={Js} height={100}/>

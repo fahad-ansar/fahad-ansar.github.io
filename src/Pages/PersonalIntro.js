@@ -3,7 +3,7 @@ import "./Pages.css";
 
 
 const PersonalIntro = () =>{
-    return <div id="Realabout" style={{backgroundColor: "blue", margin: '30px', borderRadius:'10px'}}>
+    return <div id="Realabout" style={{backgroundColor: "black", margin: '30px', borderRadius:'10px', color:"white"}}>
     
         <ul>
             {/* <li>name</li>
