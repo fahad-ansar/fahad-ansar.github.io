@@ -5,7 +5,7 @@ import "./Pages.css";
 
 const About = () =>{
 
-    return <div id="About">
+    return <div id="About" style={{float:"left", position:"static"}}>
                
        <PersonalIntro/>
 

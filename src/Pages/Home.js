@@ -1,7 +1,7 @@
 import Particles from 'react-particles-js';
 
 const Home = () =>{
-    return <div style={{background: "linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 100%)", zIndex:"1", borderRadius:"25px" }}>
+    return <div style={{background: "linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 100%)", zIndex:"1",float:"left", width:"100%",}}>
         
         <Particles params={{
 	    "particles": {

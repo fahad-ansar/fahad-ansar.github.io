@@ -19,7 +19,7 @@ import oop from './assets/oop.png';
 
 
 const Skills = () =>{
-    return <div id="Skills" >
+    return <div id="Skills"  >
 
             {/* <Card title='Java' imageUrl={Java}/> */}
             <img src={Java} height={100}/>

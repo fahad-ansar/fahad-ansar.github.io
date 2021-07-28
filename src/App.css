@@ -14,66 +14,105 @@ body{
 
 
 
-
-
 /* menu button */
-header{
-  padding: 1px 0px;
+.menu_btn{
   height: min-content;
   width: fit-content;
-  border-radius: 5px;
- 
-  margin: 2px;
-  z-index: 1;
-  /* position: absolute; */
-  color: white
+  border-radius: 15px;
+  background-color: "maroon";
+  margin: 10px;
+  padding: 5% 4%;
+  position: absolute;
 }
 
 
+.menu_btn:hover{
+  background-color: #5a0000;
+  transition: background-color 0.5s;
+}
 
+.menu_Close_btn{
+  height: min-content;
+  width: fit-content;
+  border-radius: 5px;
+  margin-left: 72%;
+  margin-top: 8%;
+  margin-bottom: 5%;
+  padding: 6%;
+}
 
-
+.menu_Close_btn:hover{
+  background-color: #5a0000;
+  transition: background-color 0.25s;
+}
 
 
 /* side nav bar */
+.sidenav_collapsed{
+  background: linear-gradient(90deg, rgba(124,0,0,1) 0%, rgba(106,5,5,1) 100%);
+  height:100%;
+  width:65px;
+  float: left;
+  display: block;
+  position:absolute;
+  transition: all 0.3s cubic-bezier(.17,.67,.43,1.19);
+  z-index: 1;
+}
+
 .sidenav {
-  background-color: maroon;
+  background: linear-gradient(90deg, rgba(124,0,0,1) 0%, rgba(106,5,5,1) 100%);
   z-index: 2;
   height:100%;
   left: -100%;
   width:180px;
-  position: absolute;
-  transition: all 0.3s cubic-bezier(.17,.67,.43,1.19);
-  border-radius: 10px;
-  z-index: 2;
+  position:fixed;
+  transition: all 0.1s cubic-bezier(.01,.83,.58,.85);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 
 .sidenav.active{
   left: 0%;
+  
 }
 
 .sidenav ul li a{
   text-decoration: none;
   font-size:larger;
   color:#efefef;
+  
 }
 
 
 .sidenav ul{
   padding: 5%;
-  margin-top: 60%;
+  margin-top: 10%;
 }
 
-.sidenav ul li{
+.sidenav ul li {
   list-style-type:none;
   font-weight:lighter;
   padding: 20px;
   margin-top: 20%;
   display: block;
-
+  background-color: #6b0000c9;
 }
 
+.sidenav_collapsed ul li{
+  list-style-type:none;
+  font-weight:lighter;
+  padding: 20px 10px;
+  margin-top: 90%;
+  display: block;
+  background-color: #6b0000c9;
+}
+
+.sidenav_collapsed ul{
+  padding: 5%;
+  margin-top: 120%;
+  border-bottom: #444444;
+}
 
 
 
@@ -107,7 +146,8 @@ header{
   border-radius: 15px;
 }
 
-/* linear */
+
+/* linear gradient*/
 @keyframes btn-effects-home {
   0%{background: transparent;}
   25%{background: linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 25%); }
@@ -116,7 +156,7 @@ header{
   100%{background: linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 100%); }
 }
 
-/**/
+/*reverse linear gradient*/
 @keyframes btn-effects-prj {
   0%{background: transparent;}
   25%{background: linear-gradient(270deg, rgba(138,70,252,1) 0%, rgba(255,0,0,1) 25%); }
@@ -125,7 +165,7 @@ header{
   100%{background: linear-gradient(270deg, rgba(138,70,252,1) 0%, rgba(255,0,0,1) 100%); }
 }
 
-/*circular*/
+/*circular gradient*/
 @keyframes btn-effects-abt {
   0%{background: transparent;}
   25%{background: radial-gradient(circle, rgba(114,31,252,1) 0%, rgba(2,223,207,1) 25%); }
