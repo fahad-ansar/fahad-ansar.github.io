@@ -35,7 +35,6 @@ function App() {
     const [showNav, setShowNav] = useState(false);
     const toggle = ()=> setShowNav(!showNav);
 
-
     return ( 
     <>
        <div>
