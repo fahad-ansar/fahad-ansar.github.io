@@ -1,4 +1,6 @@
 PORTFOLIO WEBSITE
 
 
-Currently working on..Mobile version
+Currently working on..
+Minor bugs
+Mobile version
