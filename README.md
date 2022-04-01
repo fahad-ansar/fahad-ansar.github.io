@@ -1,4 +1,4 @@
-#portfolio website
+portfolio website
 
-###Currently working on..
-####Mobile version
+
+Currently working on..Mobile version
