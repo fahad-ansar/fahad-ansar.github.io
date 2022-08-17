@@ -15,7 +15,7 @@
         "styled-components": "^5.3.0",
         "web-vitals": "^1.1.1"
     },
-    "homepage": "https://fahad-ansar.github.io/",
+    "homepage": "https://fahadansar.com/",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",

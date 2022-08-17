@@ -1,8 +1,10 @@
-import Timeline from "./Timeline/Timeline.";
+import Timeline from "./Timeline/Timeline";
+import './Timeline/timeline.css';
+
 
 const Prj = () =>{
-    return <div style={{position:"relative", float:"left"}}>
-           <h1>Under Development..</h1>
+    return <div className="story-container">
+           <Timeline />
     </div>
 }
 

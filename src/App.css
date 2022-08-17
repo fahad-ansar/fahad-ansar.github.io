@@ -6,45 +6,58 @@
 }
 
 body{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: 'Courier New', Courier, monospace;
+  scroll-behavior: smooth;
+  background-color: #ececec;
 }
 
 
 
 /* menu button */
 .menu_btn{
-  height: min-content;
-  width: fit-content;
+  height: 45px;
+  width: 45px;
   border-radius: 15px;
-  background-color: "maroon";
-  margin: 10px;
-  padding: 5% 4%;
-  position: absolute;
+  background-color: #490000;
+  margin: 2px 0 0 10px;
+  position: fixed;
+  box-shadow: #000000 5px 5px 3px;
+  z-index: 3;
 }
 
+.menu_btn:active{
+  box-shadow:  none;
+  transform: scale(0.7) ;
+}
 
 .menu_btn:hover{
-  background-color: #5a0000;
+  background-color: #aa0000;
   transition: background-color 0.5s;
+  box-shadow: #000000 5px 5px 8px;
 }
 
 .menu_Close_btn{
   height: min-content;
   width: fit-content;
+  background-color: #490000;
   border-radius: 5px;
-  margin-left: 72%;
-  margin-top: 8%;
-  margin-bottom: 5%;
-  padding: 6%;
+  margin: 8% 0 5% 60%;
+  padding: 2%;
+  box-shadow: #000000 2px 2px 3px;
 }
 
 .menu_Close_btn:hover{
-  background-color: #5a0000;
-  transition: background-color 0.25s;
+  background-color: #aa0000;
+  transition: background-color 0.25;
+  box-shadow: #000000 5px 5px 8px;
+  transform: scale(1.2) ;
 }
+
+.menu_Close_btn:active{
+  box-shadow:  none;
+  transform: scale(0.7) ;
+}
+
 
 
 /* side nav bar */
@@ -53,22 +66,25 @@ body{
   height:100%;
   width:65px;
   float: left;
-  display: block;
-  position:absolute;
+  flex: 1;
+  position:fixed;
   transition: all 0.3s cubic-bezier(.17,.67,.43,1.19);
-  z-index: 1;
+  z-index: 2;
+  left: 0;
+  border-top-right-radius: 95px;
+  /* border-bottom-right-radius: 95px; */
 }
 
 .sidenav {
   background: linear-gradient(90deg, rgba(124,0,0,1) 0%, rgba(106,5,5,1) 100%);
-  z-index: 2;
+  z-index: 4;
   height:100%;
   left: -100%;
   width:180px;
   position:fixed;
   transition: all 0.1s cubic-bezier(.01,.83,.58,.85);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 100px;
+  /* border-bottom-right-radius: 100px; */
 }
 
 
@@ -87,7 +103,7 @@ body{
 
 .sidenav ul{
   padding: 5%;
-  margin-top: 10%;
+  margin-top: 18%;
 }
 
 .sidenav ul li {
@@ -183,4 +199,55 @@ body{
 
 .navIcon:hover {
   color: rgb(0, 0, 0) ;
+}
+
+
+.page{
+  margin:0px 10px 0 75px;
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 900px) {
+  *{
+    border-radius: 0px;
+  }
+  .sidenav_collapsed {
+    left: -100px;
+  }
+
+  .page{
+    margin: 0px;
+  }
+
+  .menu_btn{
+    height: 35px;
+    width: 60px;
+    border-radius: 0 15px 15px 0;
+    background-color: #490000;
+    margin: 15px 0 0 0px;
+    box-shadow: #000000 1px 1px 3px;
+    z-index: 3;
+  }
+
+  .menu_btn:active{
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+/* export to the relative file */
+/* social media links */
+#sm{
+  display: flex;
+  /* align the links to left vertical */
+  background-color: red;
+  width: 100%;
+  position: fixed;
+  left:0;
+  bottom: 0;
+  z-index: 100;
 }

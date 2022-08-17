@@ -1,4 +1,3 @@
-import "./Pages.css";
 
 import github from './assets/github.png';
 import playstore from './assets/plystore.png';

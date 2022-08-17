@@ -1,8 +1,14 @@
 import Particles from 'react-particles-js';
+import Roshambo from '../Roshambo/rps';
+import Slot from '../SlorMachine/slot';
+import img from './img.png';
+
+
+
 
 const Home = () =>{
-    return <div style={{background: "linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 100%)", zIndex:"1",float:"left", width:"100%",}}>
-        
+    return < div className='page'>
+			<div style={{background: "linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(4,106,0,1) 100%)",float:"left", width:"100%",borderRadius:"10px"}}>
         <Particles params={{
 	    "particles": {
 			"number": {
@@ -88,12 +94,26 @@ const Home = () =>{
 			
 			}
 		  },
-		}} style={{position:"relative",zIndex:"0"}} />
-
-
-		{/* <h1 style={{position:"absolute",top:"0",left:"0",zIndex:"1",float:"left"}}>fflsfjglksdfjgsldkfgjklj</h1> */}
-
+		}} />
+			
+		<div style={{position:"absolute",top:"0",margin:"5% 40% 5% 40%",zIndex:"1",color:"white"}}>
+			<h1>Fahad Ansar</h1>
+		</div>
     </div>
+
+
+	{/* <div style={{background: "linear-gradient(90deg, rgba(255,150,0,1) 0%, rgba(48,106,0,1) 100%)",float:"left", width:"100%"}}>
+        <Roshambo/>
+    </div>
+
+	<div style={{background: "linear-gradient(90deg, rgba(255,150,0,1) 0%, rgba(48,106,0,1) 100%)",float:"left", width:"100%",}}>
+        <Slot/>
+    </div> */}
+
+
+	</div>
+	
+
 
 }
 

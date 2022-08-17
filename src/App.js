@@ -1,30 +1,50 @@
 import React ,{useState} from 'react';
 import './App.css';
 import './index.css';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import Social from "./Pages/SocialMedia";
 
-import Rosh from './Games/Rosh';
+// import Rosh from './Games/Rosh';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Prj from './Pages/Prj';
-
 import Footer from './Components/Footer';
-
-import {Link} from 'react-router-dom';  
-
-
-import {BsBoxArrowInLeft} from 'react-icons/bs';
-import {CgMenuRound} from 'react-icons/cg';
-
-
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
-
-
 
 //nav icons
 import {RiHome2Fill} from 'react-icons/ri';
 import {MdTimeline} from 'react-icons/md';
 import {RiFocus2Line} from 'react-icons/ri';
+import {BsBoxArrowInLeft} from 'react-icons/bs';
+import {CgMenuRound} from 'react-icons/cg';
+
+
+
+
+
+
+
+
+
+
+
+
+
+//TODO
+/*
+ -  load all the projects to your website
+ -  make basic cards for each skill you have 
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -33,16 +53,22 @@ function App() {
 
 
     const [showNav, setShowNav] = useState(false);
-    const toggle = ()=> setShowNav(!showNav);
+    const toggle = ()=> {setShowNav(!showNav);
+        // document.getElementsByTagName('body').style.filter = 'blur(5px)';
+    }
 
     return ( 
     <>
        <div>
          <Router>
 
+
+       
         <div className="nav">
-            <div className="sidenav_collapsed">
-                <header ><CgMenuRound onClick={toggle} size='40' color='#ffffff' className='menu_btn' /></header>
+        <header ><CgMenuRound onClick={toggle} size='10' color='#ffffff' className='menu_btn' /></header>
+
+             {/* Nav  collapsed */}
+            <div className="sidenav_collapsed" style={{display:'inline-block'}}>
                 <ul>
                     <li id="home">
                     <Link to='/'><RiHome2Fill className="navIcon" /></Link>
@@ -56,29 +82,27 @@ function App() {
                 </ul> 
             </div>
            
+
+           {/* Nav not collapsed */}
             <div className={showNav ? 'sidenav active' : 'sidenav'}> 
-            
-            <BsBoxArrowInLeft onClick={toggle} size='25' color='#fff' className='menu_Close_btn' />
-            <ul onClick={toggle}>
-                <li id="home">
-                <RiHome2Fill className="navIcon" /><Link to='/'>HOME</Link>
-                </li>
-                <li id="prj">
-                <MdTimeline className="navIcon"/><Link to='/prj'>PROJECTS</Link>
-                </li>
-                <li id="abt">
-                <RiFocus2Line className="navIcon"/><Link to='/about'>ABOUT</Link>
-                </li>
-            </ul>
-        
-
-            
-        </div>
+                <BsBoxArrowInLeft onClick={toggle} size='25' color='#fff' className='menu_Close_btn' />
+                <ul onClick={toggle}>
+                    <li id="home">
+                    <RiHome2Fill className="navIcon" /><Link to='/'>HOME</Link>
+                    </li>
+                    <li id="prj">
+                    <MdTimeline className="navIcon"/><Link to='/prj'>STORY</Link>
+                    </li>
+                    <li id="abt">
+                    <RiFocus2Line className="navIcon"/><Link to='/about'>ABOUT</Link>
+                    </li>
+                </ul>
+            </div>
             
         </div>
 
         
-
+        {/* Routes of navbar */}
         <div className='main'>
             <Route path='/' exact={true} component={Home}/>
             <Route path='/prj' exact={true} component={Prj}/>
@@ -86,6 +110,9 @@ function App() {
 
         </div>
 
+        {/* <Social/> */}
+
+        
         <Footer/>
 
         </Router>
