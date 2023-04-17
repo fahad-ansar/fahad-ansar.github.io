@@ -1,6 +1,5 @@
 import Particles from 'react-particles-js';
 import Roshambo from '../Roshambo/rps';
-import Slot from '../SlorMachine/slot';
 import img from './img.png';
 
 

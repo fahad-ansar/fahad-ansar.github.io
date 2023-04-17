@@ -17,6 +17,7 @@ import oop from './assets/oop.png';
 
 
 
+
 const Skills = () =>{
     return <div id="Skills"  >
 
@@ -33,6 +34,8 @@ const Skills = () =>{
             <img src={mongodb} height={100}/>
             <img src={npm} height={100}/>
             <img src={oop} height={100}/>
+            
+           <a href="./schedule.html">dsafdfasdfasdfsdfd</a>
             
     </div>
 }

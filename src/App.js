@@ -22,16 +22,8 @@ import {CgMenuRound} from 'react-icons/cg';
 
 
 
-
-
-
-
-
-
-
 //TODO
 /*
- -  load all the projects to your website
  -  make basic cards for each skill you have 
 */
 

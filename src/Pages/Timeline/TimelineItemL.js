@@ -22,13 +22,11 @@ const TimelineItemL = (props) => {
                     
                     <p className="name">{props.name}</p>
 
-
-                    
-
                     <div className="hidden_details">
                         <p className="desc">{props.des}</p>
-                        <image>HERE</image>
-                        <button className="benchmark-link"><a href={props.link} >Code</a></button>
+                        <image>{props.img}</image>
+
+                        {/* <button className="benchmark-link"><a href={props.link} >Code</a></button> */}
                     </div>
       
                     
