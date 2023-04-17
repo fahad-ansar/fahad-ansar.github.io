@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "short_name": "Fahad",
   "name": "fahadansar.website",
+=======
+  "short_name": "FAHAD",
+  "name": "Fahad Ansar Website",
+>>>>>>> e2059964df435cef02499ece64acc71a91ba527d
   "icons": [
     {
       "src": "favicon.ico",
